@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Calming light theme colors */
+    --background: 180 20% 99%;
+    --foreground: 200 8% 24%;
+
+    --card: 180 20% 99%;
+    --card-foreground: 200 8% 24%;
+
+    --popover: 180 20% 99%;
+    --popover-foreground: 200 8% 24%;
+
+    /* Soft sage green as primary */
+    --primary: 150 30% 60%;
+    --primary-foreground: 150 40% 16%;
+
+    /* Gentle lavender as secondary */
+    --secondary: 250 20% 96%;
+    --secondary-foreground: 250 10% 30%;
+
+    /* Muted tones */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 45%;
+
+    /* Soft accent */
+    --accent: 180 25% 95%;
+    --accent-foreground: 200 8% 24%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 200 10% 90%;
+    --input: 200 10% 90%;
+    --ring: 150 30% 60%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Soothing dark theme colors */
+    --background: 200 50% 3%;
+    --foreground: 210 20% 98%;
+
+    --card: 200 50% 3%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 200 50% 3%;
+    --popover-foreground: 210 20% 98%;
+
+    /* Soft sage in dark mode */
+    --primary: 150 30% 70%;
+    --primary-foreground: 150 40% 16%;
+
+    /* Gentle purple in dark mode */
+    --secondary: 250 20% 20%;
+    --secondary-foreground: 210 20% 98%;
+
+    /* Muted dark tones */
+    --muted: 200 50% 10%;
+    --muted-foreground: 210 20% 70%;
+
+    /* Soft dark accent */
+    --accent: 200 50% 10%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 200 50% 10%;
+    --input: 200 50% 10%;
+    --ring: 150 30% 70%;
+  }
+}
+
+/* Add subtle transitions */
+@layer base {
+  * {
+    @apply border-border transition-colors duration-200;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Add some calming animations */
+.hover-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}
+
+.gentle-shadow {
+  @apply shadow-lg shadow-primary/5;
+}
+
+/* Add after your existing styles */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes scroll {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+.animate-scroll {
+  animation: scroll 2s ease-in-out infinite;
+}
+
+/* Gradient animations */
+.gradient-animation {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add to your existing animations */
+@keyframes pulse-gentle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2s ease-in-out infinite;
+}
+
+@layer utilities {
+  .bg-size-200 {
+    background-size: 200% 100%;
+  }
+
+  .bg-pos-0 {
+    background-position: 0% 0%;
+  }
+
+  .bg-pos-100 {
+    background-position: 100% 0%;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+
+  .gentle-shadow {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .gentle-shadow:hover {
+    box-shadow: 0 8px 30px -2px rgba(0, 0, 0, 0.15);
+  }
+}

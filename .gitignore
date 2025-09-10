@@ -1,0 +1,85 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/backend
+./backend
+/.pnp
+.pnp.*
+.yarn/*
+expo-app
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+/.cursorrules
+structure.md
+/idea.txt
+/info.txt
+./idea.txt
+./info.txt
+./secrete.txt
+secrete.txt
+/secrete.txt
+/auto-commit.log
+auto-commit.log
+# testing
+/coverage
+./.cursorrules
+# next.js
+/.next/
+/out/
+/scripts
+/push_changes.sh
+test.md
+structuree.md
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+/prerun.sh
+/postrun.sh
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+/Zerepy
+./Zerepy
+/.Zerepy
+
+# env files (can opt-in for committing if needed)
+.env*
+hardhat.config.js
+# vercel
+.vercel
+drizzle.config.js
+hardhat.config.js
+/hardhat.config.js
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+node_modules
+.env
+push.sh
+/push.sh
+# Hardhat files
+/cache
+
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# Hardhat Ignition default folder for deployments against a local node
+ignition/deployments/chain-31337
+
+# Private keys
+secrete.txt
