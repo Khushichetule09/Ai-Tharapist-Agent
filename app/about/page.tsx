@@ -36,7 +36,7 @@ export default function AboutPage() {
         className="text-center mb-20"
       >
         <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-          About Aura3.0
+          About Luma3.0
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           We're revolutionizing mental health support by combining cutting-edge
