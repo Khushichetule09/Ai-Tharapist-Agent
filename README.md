@@ -12,4 +12,4 @@ Next.js • TypeScript • TailwindCSS • Gemini API • Context-based Prompt E
 - Fast, privacy-first, and deployable on Vercel or custom servers  
 
 ## 📄 License
-MIT © 2025 Khushi Chetule
+MIT © 2026 Khushi Chetule
